@@ -18,6 +18,7 @@ import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
 import { JobCardComponent } from './jobs/job-card/job-card.component';
 import {JwtModule} from '@auth0/angular-jwt';
+import { JobDetailComponent } from './jobs/job-detail/job-detail.component';
 
 export function tokenGetter(){
   return localStorage.getItem('token')
@@ -32,7 +33,8 @@ export function tokenGetter(){
     JobListComponent,
     ListsComponent,
     MessagesComponent,
-    JobCardComponent
+    JobCardComponent,
+    JobDetailComponent
   ],
   imports: [
     BrowserModule,

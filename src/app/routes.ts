@@ -17,8 +17,5 @@ export const appRoutes: Routes = [
       {path: 'lists', component: ListsComponent}
     ]
   },
-  { path: 'jobs', component: JobListComponent, canActivate: [AuthGuard]},
-  { path: 'messages', component: MessagesComponent},
-  { path: 'lists', component: ListsComponent},
   { path: '**', redirectTo: '', pathMatch: 'full'},
   ];

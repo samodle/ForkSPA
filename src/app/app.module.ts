@@ -11,11 +11,12 @@ import { RegisterComponent } from './register/register.component';
 import {ErrorInterceptorProvider} from './_services/error.interceptor';
 import {BsDropdownModule} from 'ngx-bootstrap/dropdown';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { JobListComponent } from './job-list/job-list.component';
+import { JobListComponent } from './jobs/job-list/job-list.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './routes';
+import { JobCardComponent } from './jobs/job-card/job-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {appRoutes} from './routes';
     RegisterComponent,
     JobListComponent,
     ListsComponent,
-    MessagesComponent
+    MessagesComponent,
+    JobCardComponent
   ],
   imports: [
     BrowserModule,

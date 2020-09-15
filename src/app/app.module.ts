@@ -19,6 +19,9 @@ import {appRoutes} from './routes';
 import { JobCardComponent } from './jobs/job-card/job-card.component';
 import {JwtModule} from '@auth0/angular-jwt';
 import { JobDetailComponent } from './jobs/job-detail/job-detail.component';
+import {TabsModule} from 'ngx-bootstrap/tabs';
+import {JobDetailResolver} from './_resolvers/job-detail.resolver';
+import {JobListResolver} from './_resolvers/job-list.resolver';
 
 export function tokenGetter(){
   return localStorage.getItem('token')
@@ -42,6 +45,7 @@ export function tokenGetter(){
     FormsModule,
     BrowserAnimationsModule,
     BsDropdownModule.forRoot(),
+    TabsModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     JwtModule.forRoot({
       config: {
@@ -53,7 +57,9 @@ export function tokenGetter(){
   ],
   providers: [
     AuthService,
-    ErrorInterceptorProvider
+    ErrorInterceptorProvider,
+    JobDetailResolver,
+    JobListResolver
   ],
   bootstrap: [AppComponent]
 })
